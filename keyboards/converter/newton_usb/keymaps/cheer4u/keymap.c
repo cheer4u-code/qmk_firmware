@@ -41,14 +41,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_CAPS, _______, _______, _______, _______, _______, _______, _______, KC_PSCR, KC_SCRL, KC_PAUS, _______, _______, _______,
         KC_RCTL, KC_VOLD, KC_VOLU, KC_MUTE, _______, _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______,          _______,
         _______, KC_BTN1, KC_BTN2, _______, _______, QK_BOOT, _______, _______, _______, _______, _______,                   _______,
-        _______, KC_RALT, KC_MENU,                            _______,                            KC_HOME, KC_END,  KC_PGDN, KC_PGUP),
+        _______, KC_RALT, KC_RGUI,                            _______,                            KC_HOME, KC_END,  KC_PGDN, KC_PGUP),
 };
 // clang-format on
 
-const key_override_t bspc_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DEL, KC_BSPC);
+const key_override_t tilde_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_ESC, S(KC_GRV));
+const key_override_t alt_grave_key_override = ko_make_basic(MOD_MASK_ALT, KC_ESC, A(KC_GRV));
+const key_override_t backspace_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DEL, KC_BSPC);
 
 // This globally defines all key overrides to be used
 const key_override_t **key_overrides = (const key_override_t *[]){
-    &bspc_key_override,
+    &tilde_key_override,
+    &alt_grave_key_override,
+    &backspace_key_override,
     NULL // Null terminate the array of overrides!
 };
