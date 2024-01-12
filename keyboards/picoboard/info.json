@@ -1,0 +1,29 @@
+{
+    "manufacturer": "Raspberry Pi",
+    "keyboard_name": "picoboard",
+    "maintainer": "cheer4u-code",
+    "bootloader": "rp2040",
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": false,
+        "command": false,
+        "console": false,
+        "extrakey": false,
+        "mousekey": false,
+        "nkro": false
+    },
+    "processor": "RP2040",
+    "url": "",
+    "usb": {
+        "device_version": "0.0.1",
+        "pid": "0x0001",
+        "vid": "0xFEED"
+    },
+    "layouts": {
+        "LAYOUT_ortho_1x1": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0}
+            ]
+        }
+    }
+}
