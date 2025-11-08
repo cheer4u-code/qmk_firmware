@@ -13,8 +13,8 @@ uint8_t matrix_scan_custom(matrix_row_t current_matrix[]) {
     if (!uart_available()) return false;
     uint8_t code = uart_read();
 
-    debug_hex(code);
-    debug(" ");
+    print_hex8(row);
+    print(" ");
 
     uint8_t row = (code >> 3) & 0xF;
     // row 0x8-0xE are unused.
